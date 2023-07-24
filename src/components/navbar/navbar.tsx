@@ -1,17 +1,35 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import {RxHamburgerMenu } from "react-icons/rx";
+import { RxHamburgerMenu } from 'react-icons/rx';
+
 const NavbarContainer = styled.nav`
   position: fixed;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content:space-between;
   top: 0;
   left: 0;
   width: 100%;
   background-color: #ffff;
   padding: 16px;
   z-index: 999;
+  
+ 
 `;
-
-
+const Logo =styled.div`
+  font-family: poppins;
+  font-weight: 700;
+  font-size: 22px;
+  color: black;
+  margin:0 50px;
+  span{
+    color: #1BC46E;
+  }
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+`;
 const NavbarToggle = styled.button`
   display: none;
 
@@ -23,8 +41,9 @@ const NavbarToggle = styled.button`
 `;
 
 const NavbarMenu = styled.ul<{ isOpen: boolean }>`
+ margin:0 50px;
   list-style-type: none;
-  margin: 0;
+
   padding: 0;
   display: flex;
 
@@ -35,24 +54,43 @@ const NavbarMenu = styled.ul<{ isOpen: boolean }>`
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: #f1f1f1;
+    background-color: #f3f3f3b7;
     padding: 16px;
     z-index: 999;
+    margin:0;
   }
 `;
 
 const NavbarMenuItem = styled.li`
   margin-right: 16px;
-
+  
   @media (max-width: 768px) {
     margin: 8px 0;
   }
 `;
 
 const NavbarLink = styled.a`
-  text-decoration: none;
-  color: #333;
+  color: var(--primary-foundation-grey-normal-hover, #2B2B2B);
+/* Heading 4/Medium/22 */
+font-family: Poppins;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 36px;
+letter-spacing: 1px;
 `;
+
+interface MenuItem {
+  title: string;
+  url: string;
+}
+
+const menuItems: MenuItem[] = [
+  { title: 'Home', url: '/' },
+  { title: 'Product', url: '/Product' },
+  { title: 'About', url: '/about' },
+  { title: 'Contact', url: '/contact' },
+];
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -63,20 +101,18 @@ const Navbar: React.FC = () => {
 
   return (
     <NavbarContainer>
-
       <NavbarToggle onClick={toggleMenu}>
-        <RxHamburgerMenu/>
+        <RxHamburgerMenu />
       </NavbarToggle>
+      <Logo>UMKMJarangan
+        <span>.com</span>
+      </Logo>
       <NavbarMenu isOpen={isOpen}>
-        <NavbarMenuItem>
-          <NavbarLink href="/">Home</NavbarLink>
-        </NavbarMenuItem>
-        <NavbarMenuItem>
-          <NavbarLink href="/about">About</NavbarLink>
-        </NavbarMenuItem>
-        <NavbarMenuItem>
-          <NavbarLink href="/contact">Contact</NavbarLink>
-        </NavbarMenuItem>
+        {menuItems.map((menuItem) => (
+          <NavbarMenuItem key={menuItem.url}>
+            <NavbarLink href={menuItem.url}>{menuItem.title}</NavbarLink>
+          </NavbarMenuItem>
+        ))}
       </NavbarMenu>
     </NavbarContainer>
   );

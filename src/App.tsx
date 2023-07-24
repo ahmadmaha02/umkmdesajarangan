@@ -5,6 +5,7 @@ import GlobalCss from "./styles/Global";
 import { ThemeProvider } from "styled-components";
 import { useWindowDimensions } from "./Hooks/useWindowDimensions";
 import { defaultTheme } from "./styles/Theme";
+import Product from "./pages/Product/Product";
 
 const App = () => {
   const { width } = useWindowDimensions();
@@ -14,7 +15,7 @@ const App = () => {
         <GlobalCss />
         <Routes>
           <Route path='/' element={<Home />} />
-          
+          <Route path='/product' element={<Product />} />
         </Routes>
     
     </ThemeProvider>
