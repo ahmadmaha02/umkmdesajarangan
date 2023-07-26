@@ -6,6 +6,7 @@ import { ThemeProvider } from "styled-components";
 import { useWindowDimensions } from "./Hooks/useWindowDimensions";
 import { defaultTheme } from "./styles/Theme";
 import Product from "./pages/Product/Product";
+import About from "./pages/About/About";
 
 const App = () => {
   const { width } = useWindowDimensions();
@@ -16,6 +17,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/product' element={<Product />} />
+          <Route path='/about' element={<About />} />
         </Routes>
     
     </ThemeProvider>

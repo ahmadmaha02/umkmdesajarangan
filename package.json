@@ -10,14 +10,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "framer-motion": "^10.12.21",
     "react": "^18.2.0",
+    "react-awesome-reveal": "^4.2.5",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
     "styled-components": "^6.0.2",
     "swiper": "^10.0.4"
   },
   "devDependencies": {
+    "@types/aos": "^3.0.4",
     "@types/react": "^18.0.37",
     "@types/react-dom": "^18.0.11",
     "@typescript-eslint/eslint-plugin": "^5.59.0",

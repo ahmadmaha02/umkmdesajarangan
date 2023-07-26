@@ -41,7 +41,7 @@ const SearchButton = styled.button`
   padding: 8px 16px;
   border: none;
   border-radius: 4px;
-  background-color: #007bff;
+  background-color: #1BC46E;
   color: #fff;
   cursor: pointer;
 `;
