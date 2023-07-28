@@ -8,7 +8,7 @@ export const Container = styled.div`
   margin: 0;
   margin-top: 70px;
   width: 100%;
-
+  margin-bottom: 50px;
   @media (max-width: X768px) {
     margin-top: 70px;
   }

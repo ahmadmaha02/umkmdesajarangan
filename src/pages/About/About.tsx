@@ -4,6 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import styled, { keyframes } from 'styled-components';
 import Navbar from "../../components/navbar/navbar";
+import Footer from "../../components/Footer/Footer";
 
 const Container = styled.div`
 margin-top: 80px;
@@ -88,7 +89,7 @@ const teamMembers = [
 ];
 
 // Goals of the team
-const teamGoals = 'Our team aims to deliver high-quality software solutions that exceed our clients\' expectations. We believe in collaboration, continuous learning, and innovation to tackle the most challenging projects.';
+const teamGoals = 'kegiatan Pengabdian Kepada masyarakat Perguruan Tinggi secara umum sebagaimana dinyatakan dalam UU Nomor 12 tahun 2012, yaitu merupakan kegiatan sivitas akademika dalam mengamalkan dan membudayakan ilmu, pengetahuan, teknologi untuk memajukan kesejahteraan umum dan mencerdaskan kehidupan bangsa.';
 
 const About: React.FC = () => {
   useEffect(() => {
@@ -113,6 +114,7 @@ const About: React.FC = () => {
         <p>{teamGoals}</p>
       </GoalsContainer>
     </Container>
+    <Footer/>
     </>
   );
 };

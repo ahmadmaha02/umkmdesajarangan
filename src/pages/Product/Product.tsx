@@ -9,8 +9,8 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   margin: 0;
+  margin-top: 70px;
   width: 100%;
-
 `;
 
 const PageContainer = styled.div`
@@ -18,22 +18,32 @@ const PageContainer = styled.div`
   flex-wrap: wrap;
   margin: 45px;
   align-items: flex-start;
-`;
+  @media (max-width: 768px) {
+    align-items: center;
+  }
+`;  
 
 const SearchContainer = styled.div`
   display: flex;
   align-items: center;
-  margin-top: 80px;
+  margin-top: 20px;
   justify-content: center;
+
+
 `;
 
 const SearchInput = styled.input`
   padding: 8px 16px;
-  width: 600px;
+  width: 300px;
   border: none;
   color: #1c1c1c;
   border-radius: 4px;
   background-color: #fff;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    
+  }
 `;
 
 const SearchButton = styled.button`
@@ -41,9 +51,14 @@ const SearchButton = styled.button`
   padding: 8px 16px;
   border: none;
   border-radius: 4px;
-  background-color: #1BC46E;
+  background-color: #1bc46e;
   color: #fff;
   cursor: pointer;
+
+  @media (max-width: 768px) {
+    margin-left: 10px;
+    width: 70%;
+  }
 `;
 
 

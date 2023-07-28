@@ -1,17 +1,27 @@
 import React from "react";
 import styled from "styled-components";
 
+const CardsWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+`;
+
 const CardContainer = styled.div`
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 16px;
-  width: 200px;
+  width: calc(50% - 32px); /* Each card takes 50% width minus the margin */
   margin: 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  color:#000;
+  color: #000;
+
+  @media (min-width: 768px) {
+    width: 200px; /* Reset to 200px width on larger screens */
+  }
 `;
 
 const ProductImage = styled.img`
@@ -32,7 +42,7 @@ const ProductPrice = styled.p`
 
 const BuyButton = styled.button`
   padding: 8px 16px;
-  background-color: #1BC46E;
+  background-color: #1bc46e;
   color: #fff;
   border: none;
   border-radius: 4px;
