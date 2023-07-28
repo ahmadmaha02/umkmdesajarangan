@@ -7,6 +7,7 @@ export const Container = styled.div`
   justify-content: center;
   margin: 0;
   margin-top: 70px;
+  margin-bottom:50px;
   width: 100%;
 
   @media (max-width: X768px) {

@@ -8,6 +8,7 @@ import Slider from "../../components/Slider/Slider";
 import VideoBackground from "../../components/VideoBackground/VideoBackground";
 import Video from "../../assets/video/Background.mp4"
 import OverlayText from "../../components/VideoBackground/OverlayText";
+import Footer from "../../components/Footer/Footer";
 
 
 const Home=()=>{
@@ -87,7 +88,7 @@ const Home=()=>{
                 </BannerContainer>
 
             </Container>
-            
+            <Footer/>
         </>
     );
 
