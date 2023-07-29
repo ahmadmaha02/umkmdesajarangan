@@ -7,6 +7,7 @@ import { useWindowDimensions } from "./Hooks/useWindowDimensions";
 import { defaultTheme } from "./styles/Theme";
 import Product from "./pages/Product/Product";
 import About from "./pages/About/About";
+import ContactUs from "./pages/ContactUs/ContactUs";
 
 const App = () => {
   const { width } = useWindowDimensions();
@@ -17,7 +18,8 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/product' element={<Product />} />
-          <Route path='/about' element={<About />} />
+          <Route path='/about' element={<About /> } />
+          <Route path='/contact' element={<ContactUs/>} />
         </Routes>
     
     </ThemeProvider>
