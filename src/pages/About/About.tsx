@@ -7,11 +7,13 @@ import Navbar from "../../components/navbar/navbar";
 import Footer from "../../components/Footer/Footer";
 
 const Container = styled.div`
+
 margin-top: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
+
   h1{
     color: #000000;
     font-size: 32px;
@@ -62,6 +64,7 @@ const GoalsContainer = styled.div`
   h1{
     font-size: 32px;
     color:#000;
+    margin-bottom:25px;
   }
   p{
     color: #000;
@@ -69,7 +72,7 @@ const GoalsContainer = styled.div`
   }
 `;
 
-// Data for the team members and their roles
+
 const teamMembers = [
   { name: 'John Doe', role: 'Kordes', photo: '/john-doe.jpg' },
   { name: 'Jane Smith', role: 'Wakordes', photo: '/jane-smith.jpg' },
@@ -85,15 +88,17 @@ const teamMembers = [
   { name: 'Jane Smith', role: 'Wakordes', photo: '/jane-smith.jpg' },
   { name: 'Jane Smith', role: 'Wakordes', photo: '/jane-smith.jpg' },
   { name: 'Jane Smith', role: 'Wakordes', photo: '/jane-smith.jpg' },
-  // Add more team members here
+
 ];
 
-// Goals of the team
 const teamGoals = 'kegiatan Pengabdian Kepada masyarakat Perguruan Tinggi secara umum sebagaimana dinyatakan dalam UU Nomor 12 tahun 2012, yaitu merupakan kegiatan sivitas akademika dalam mengamalkan dan membudayakan ilmu, pengetahuan, teknologi untuk memajukan kesejahteraan umum dan mencerdaskan kehidupan bangsa.';
 
 const About: React.FC = () => {
   useEffect(() => {
-    AOS.init();
+    AOS.init({
+      duration: 1500,
+    });
+    
   }, [])
   return (
     <>
@@ -110,8 +115,8 @@ const About: React.FC = () => {
         ))}
       </TeamContainer>
       <GoalsContainer>
-        <h1 >Our Goals</h1>
-        <p>{teamGoals}</p>
+        <h1 data-aos="fade-right">Our Goals</h1>
+        <p data-aos="fade-right">{teamGoals}</p>
       </GoalsContainer>
     </Container>
     <Footer/>
