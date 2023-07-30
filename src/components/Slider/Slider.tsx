@@ -50,6 +50,25 @@ const Slide = styled.div`
     font-size: 16px;
     margin-top: 5px;
   }
+  @media (max-width: 768px) {
+    height: 300px;
+    padding: 30px;
+
+    img {
+      width: 150px;
+      height: 150px;
+    }
+
+    h1 {
+      font-size: 20px;
+      margin-top: 5px;
+    }
+
+    p {
+      font-size: 14px;
+      margin-top: 3px;
+    }
+  }
 `;
 
 const Slider: React.FC<SliderProps> = ({ data }) => {
@@ -69,8 +88,9 @@ const Slider: React.FC<SliderProps> = ({ data }) => {
           modifier: 5,
           slideShadows: true,
         }}
-        autoplay={{ delay: 3000 }}
+        autoplay={{ delay: 2000 }}
         loop
+        
       >
         {data.map((slide, index) => (
           <SwiperSlide key={index}>

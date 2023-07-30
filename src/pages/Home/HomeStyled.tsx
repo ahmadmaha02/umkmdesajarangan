@@ -131,4 +131,5 @@ export const ButtonContainer = styled.div`
 export const SliderContainer =styled.div`
   margin-top: 50px;
   width: 100%;
+  
 `;
