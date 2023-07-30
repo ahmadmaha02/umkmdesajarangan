@@ -16,43 +16,43 @@ const Home=()=>{
     const data = [
         {
           image: sample,
-          title: 'Title 1',
-          description: 'Description 1',
+          name: 'Title 1',
+          price: '8000',
         },
         {
           image: sample,
-          title: 'Title 2',
-          description: 'Description 2',
+          name: 'Title 1',
+          price: '8000',
         },
         {
           image: sample,
-          title: 'Title 3',
-          description: 'Description 3',
+          name: 'Title 1',
+          price: 'Description 1',
         },
         {
             image: sample,
-            title: 'Title 3',
-            description: 'Description 3',
+            name: 'Title 1',
+          price: '8000',
           },
           {
             image: sample,
-            title: 'Title 3',
-            description: 'Description 3',
+            name: 'Title 1',
+          price: '5000',
           },
           {
             image: sample,
-            title: 'Title 3',
-            description: 'Description 3',
+            name: 'Title 1',
+          price: '10000',
           },
           {
             image: sample,
-            title: 'Title 3',
-            description: 'Description 3',
+            name: 'Title 1',
+          price: '10000',
           },
           {
             image: sample,
-            title: 'Title 3',
-            description: 'Description 3',
+            name: 'Title 1',
+          price: 'Description 1',
           },
       ];
     return(

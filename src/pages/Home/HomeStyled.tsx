@@ -129,7 +129,12 @@ export const ButtonContainer = styled.div`
 `;
 
 export const SliderContainer =styled.div`
+display: flex;
   margin-top: 50px;
   width: 100%;
+  @media (max-width: 768px) {
+    display:none;
+  }
+
   
 `;

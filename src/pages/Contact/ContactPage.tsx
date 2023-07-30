@@ -49,6 +49,7 @@ const FormTextarea = styled.textarea`
   background-color: white;
   border: none;
   resize: none;
+  color: black;
 `;
 export const ButtonContainer = styled.div`
   margin-top: 35px;

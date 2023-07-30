@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import CardProduct from "../../components/CardProduct/CardProduct";
 import Navbar from "../../components/navbar/navbar"; 
+import { productsData } from "./data";
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
   justify-content: center;
   margin: 0;
   margin-top: 70px;
@@ -27,6 +29,8 @@ const SearchContainer = styled.div`
   display: flex;
   align-items: center;
   margin-top: 20px;
+  position: absolute;
+  top: 60px;
   justify-content: center;
 
 
@@ -62,65 +66,7 @@ const SearchButton = styled.button`
 `;
 
 
-const productsData = [
-    {
-      id: 1,
-      name: "Produk 1",
-      price: 100000,
-      image:
-        "https://example.com/product1.jpg", // Ganti dengan URL gambar produk 1
-    },
-    {
-      id: 2,
-      name: "Produk 2",
-      price: 150000,
-      image:
-        "https://example.com/product2.jpg", // Ganti dengan URL gambar produk 2
-    },
-    {
-      id: 3,
-      name: "Produk 3",
-      price: 80000,
-      image:
-        "https://example.com/product3.jpg", // Ganti dengan URL gambar produk 3
-    },
-    {
-        id: 3,
-        name: "Produk 3",
-        price: 80000,
-        image:
-          "https://example.com/product3.jpg", // Ganti dengan URL gambar produk 3
-      },
-      {
-        id: 3,
-        name: "Produk 3",
-        price: 80000,
-        image:
-          "https://example.com/product3.jpg", // Ganti dengan URL gambar produk 3
-      },
-      {
-        id: 3,
-        name: "Produk 3",
-        price: 80000,
-        image:
-          "https://example.com/product3.jpg", // Ganti dengan URL gambar produk 3
-      },
-      {
-        id: 3,
-        name: "Produk 3",
-        price: 80000,
-        image:
-          "https://example.com/product3.jpg", // Ganti dengan URL gambar produk 3
-      },
-      {
-        id: 3,
-        name: "Produk 3",
-        price: 80000,
-        image:
-          "https://example.com/product3.jpg", // Ganti dengan URL gambar produk 3
-      },
- 
-  ];
+
   
 
   const Product: React.FC = () => {
@@ -132,10 +78,14 @@ const productsData = [
     };
   
     const handleSearchClick = () => {
-      // Filter products based on the search term when the button is clicked
+      // Trim the search term to remove leading and trailing spaces
+      const trimmedSearchTerm = searchTerm.trim();
+    
+      // Filter products based on the trimmed search term
       const filteredProducts = productsData.filter((product) =>
-        product.name.toLowerCase().includes(searchTerm.toLowerCase())
+        product.name.toLowerCase().includes(trimmedSearchTerm.toLowerCase())
       );
+    
       setSearchResults(filteredProducts);
     };
   

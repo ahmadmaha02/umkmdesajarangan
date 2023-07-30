@@ -5,6 +5,7 @@ import "aos/dist/aos.css";
 import styled, { keyframes } from 'styled-components';
 import Navbar from "../../components/navbar/navbar";
 import Footer from "../../components/Footer/Footer";
+import { teamMembers } from "./data";
 
 const Container = styled.div`
 
@@ -30,18 +31,21 @@ const TeamContainer = styled.div`
 
 const TeamCard = styled.div`
   width: 200px;
-  border: 1px solid #ccc;
+  border: none;
   border-radius: 8px;
   padding: 10px;
   margin: 10px;
+  box-shadow: 5px 5px 4px 4px #888888;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color:#fff;
 
 `;
 
 const TeamName = styled.h3`
   margin: 10px 0 5px;
+  font-size: 15px;
   color: #000000;
 `;
 
@@ -73,23 +77,7 @@ const GoalsContainer = styled.div`
 `;
 
 
-const teamMembers = [
-  { name: 'John Doe', role: 'Kordes', photo: '/john-doe.jpg' },
-  { name: 'Jane Smith', role: 'Wakordes', photo: '/jane-smith.jpg' },
-  { name: 'Jane Smith', role: 'Wakordes', photo: '/jane-smith.jpg' },
-  { name: 'Jane Smith', role: 'Wakordes', photo: '/jane-smith.jpg' },
-  { name: 'Jane Smith', role: 'Wakordes', photo: '/jane-smith.jpg' },
-  { name: 'Jane Smith', role: 'Wakordes', photo: '/jane-smith.jpg' },
-  { name: 'Jane Smith', role: 'Wakordes', photo: '/jane-smith.jpg' },
-  { name: 'Jane Smith', role: 'Wakordes', photo: '/jane-smith.jpg' },
-  { name: 'Jane Smith', role: 'Wakordes', photo: '/jane-smith.jpg' },
-  { name: 'Jane Smith', role: 'Wakordes', photo: '/jane-smith.jpg' },
-  { name: 'Jane Smith', role: 'Wakordes', photo: '/jane-smith.jpg' },
-  { name: 'Jane Smith', role: 'Wakordes', photo: '/jane-smith.jpg' },
-  { name: 'Jane Smith', role: 'Wakordes', photo: '/jane-smith.jpg' },
-  { name: 'Jane Smith', role: 'Wakordes', photo: '/jane-smith.jpg' },
 
-];
 
 const teamGoals = 'kegiatan Pengabdian Kepada masyarakat Perguruan Tinggi secara umum sebagaimana dinyatakan dalam UU Nomor 12 tahun 2012, yaitu merupakan kegiatan sivitas akademika dalam mengamalkan dan membudayakan ilmu, pengetahuan, teknologi untuk memajukan kesejahteraan umum dan mencerdaskan kehidupan bangsa.';
 

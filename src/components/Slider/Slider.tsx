@@ -11,8 +11,8 @@ SwiperCore.use([Navigation, EffectCoverflow]);
 interface SliderProps {
   data: {
     image: string;
-    title: string;
-    description: string;
+    name: string;
+    price: string;
   }[];
 }
 
@@ -72,6 +72,10 @@ const Slide = styled.div`
 `;
 
 const Slider: React.FC<SliderProps> = ({ data }) => {
+  const formatter = new Intl.NumberFormat('id-ID', {
+    style: 'currency',
+    currency: 'IDR',
+  });
   return (
     <SliderContainer>
       <Swiper
@@ -96,8 +100,8 @@ const Slider: React.FC<SliderProps> = ({ data }) => {
           <SwiperSlide key={index}>
             <Slide>
               <img src={slide.image} alt="Slider Image" />
-              <h1>{slide.title}</h1>
-              <p>{slide.description}</p>
+              <h1>{slide.name}</h1>
+              <p>{formatter.format(parseInt(slide.price))}</p>
             </Slide>
           </SwiperSlide>
         ))}
