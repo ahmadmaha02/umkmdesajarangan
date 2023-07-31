@@ -108,8 +108,7 @@ const SearchButton = styled.button`
                 key={product.id}
                 name={product.name}
                 price={product.price}
-                image={product.image}
-              />
+                image={product.image} direct={product.direct}              />
             ))}
           </PageContainer>
         </Container>

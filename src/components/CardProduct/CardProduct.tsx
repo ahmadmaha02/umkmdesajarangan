@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const CardsWrapper = styled.div`
@@ -10,8 +11,8 @@ const CardsWrapper = styled.div`
 const CardContainer = styled.div`
   border: 1px solid #ccc;
   border-radius: 8px;
-  padding: 16px;
-  width: calc(50% - 32px); /* Each card takes 50% width minus the margin */
+  padding: 14px;
+  width: calc(50% - 32px);
   margin: 16px;
   display: flex;
   flex-direction: column;
@@ -20,7 +21,7 @@ const CardContainer = styled.div`
   color: #000;
 
   @media (min-width: 768px) {
-    width: 200px; /* Reset to 200px width on larger screens */
+    width: 200px;
   }
 `;
 
@@ -29,15 +30,23 @@ const ProductImage = styled.img`
   height: 150px;
   object-fit: cover;
   border-radius: 8px;
+  @media (max-width: 768px) {
+    width: 70px;
+    height : 70px;
+  }
+
 `;
 
 const ProductName = styled.p`
   font-weight: bold;
+  font-size: 14px;
   margin: 8px 0;
 `;
 
 const ProductPrice = styled.p`
   margin: 4px 0;
+  font-size: 12px;
+  color: #177618;
 `;
 
 const BuyButton = styled.button`
@@ -53,15 +62,18 @@ interface Props {
   name: string;
   price: number;
   image: string;
+  direct: string;
 }
 
-const CardProduct: React.FC<Props> = ({ name, price, image }) => {
+const CardProduct: React.FC<Props> = ({ name, price, image,direct }) => {
   return (
     <CardContainer>
       <ProductImage src={image} alt={name} />
       <ProductName>{name}</ProductName>
       <ProductPrice>Rp {price.toLocaleString()}</ProductPrice>
+      <Link to={direct}>
       <BuyButton>Beli</BuyButton>
+      </Link>
     </CardContainer>
   );
 };
