@@ -23,17 +23,7 @@ const Video = styled.video`
   filter: blur(2px) saturate(1) brightness(0.5)  sepia(5%) brightness(1.1) contrast(0.9) invert(10%)  drop-shadow(0px 0px 30px #1BC46E);
 `;
 
-const OverlayText = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: #fff;
-  font-size: 2rem;
-  font-weight: bold;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-`;
+
 
 const VideoBackground: React.FC<VideoBackgroundProps> = ({ videoSource, children }) => {
   return (

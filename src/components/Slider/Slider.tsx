@@ -5,14 +5,18 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import styled from 'styled-components';
 import { EffectCoverflow , Navigation} from 'swiper/modules';
+import { Link } from 'react-router-dom';
 
 SwiperCore.use([Navigation, EffectCoverflow]);
 
 interface SliderProps {
   data: {
-    image: string;
-    name: string;
-    price: string;
+
+      name: string;
+      price: number;
+      image: string;
+      direct: string;
+    
   }[];
 }
 
@@ -21,6 +25,15 @@ const SliderContainer = styled.div`
   max-width: 1120px;
   margin: 0 auto;
   
+`;
+
+const BuyButton = styled.button`
+  padding: 8px 16px;
+  background-color: #1bc46e;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 `;
 
 const Slide = styled.div`
@@ -101,7 +114,10 @@ const Slider: React.FC<SliderProps> = ({ data }) => {
             <Slide>
               <img src={slide.image} alt="Slider Image" />
               <h1>{slide.name}</h1>
-              <p>{formatter.format(parseInt(slide.price))}</p>
+              <p>{formatter.format(slide.price)}</p>
+              <Link to={slide.direct}>
+            <BuyButton>Beli</BuyButton>
+            </Link>
             </Slide>
           </SwiperSlide>
         ))}

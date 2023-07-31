@@ -16,6 +16,10 @@ const StyledOverlayText = styled.div`
   font-size: 2rem;
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+    
+  }
 `;
 
 const OverlayText: React.FC<OverlayTextProps> = ({ children }) => {

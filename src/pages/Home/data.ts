@@ -15,7 +15,7 @@ import regularl from "../../assets/image/regular.jpg"
 import curly from "../../assets/image/sausage.jpg"
 import cheezy from "../../assets/image/cheezy.jpg"
 import mini from "../../assets/image/mini.jpg"
-export const productsData = [
+export const data = [
     {
       id: 1,
       name: " Kerupuk Bandeng Lanang",

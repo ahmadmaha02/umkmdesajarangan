@@ -18,7 +18,7 @@ export const Section = styled.div`
   display: flex;
   margin: 0;
   width: 100%;
-  height: 422px;
+  height: auto;
   justify-content: space-between;
   align-items: center;
   padding: 50px;
@@ -27,16 +27,17 @@ export const Section = styled.div`
 
   h1 {
     color: #FFF;
-    font-size: 32px;
+    font-size: 22px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
   }
 
   img {
-    max-width: 330.656px;
-    max-height: 305.923px;
+    max-width: 430.656px;
+    max-height: 405.923px;
     width: 100%;
+    border-radius: 10px;
     height: 100%;
   }
 
@@ -45,14 +46,14 @@ export const Section = styled.div`
     height: auto;
     margin: 0;
     padding: 15px;
-    gap: 50px;
+    gap: 10px;
 
     h1 {
       font-size: 16px;
     }
 
     img {
-      width: 150px;
+      width: 350px;
       height: 180px;
     }
   }
