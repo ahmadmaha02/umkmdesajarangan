@@ -49,7 +49,7 @@ export const Section = styled.div`
     gap: 10px;
 
     h1 {
-      font-size: 16px;
+      font-size: 12px;
     }
 
     img {
