@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const CardsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -66,8 +67,14 @@ interface Props {
 }
 
 const CardProduct: React.FC<Props> = ({ name, price, image,direct }) => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1500,
+    });
+    
+  }, [])
   return (
-    <CardContainer>
+    <CardContainer data-aos="fade-up">
       <ProductImage src={image} alt={name} />
       <ProductName>{name}</ProductName>
       <ProductPrice>Rp {price.toLocaleString()}</ProductPrice>

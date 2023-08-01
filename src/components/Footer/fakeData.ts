@@ -22,73 +22,33 @@ export const section2 = [
   {
     id: 1,
     text: "Tentang Kami",
-    url: "",
+    url: "/about",
   },
   {
     id: 2,
     text: "Kebijakan Privasi",
-    url: "",
+    url: "/",
   },
   {
     id: 3,
     text: "Hubungi Kami",
-    url: "",
+    url: "/contact",
   },
-  {
-    id: 4,
-    text: "Karier",
-    url: "",
-  },
-  {
-    id: 5,
-    text: "FAQ",
-    url: "",
-  },
+
 ];
 
 export const section3 = [
   {
     id: 1,
-    text: "lorem",
-    url: "",
+    text: "Produk",
+    url: "/product",
   },
   {
     id: 2,
-    text: "lorem",
-    url: "",
+    text: "Kontak",
+    url: "/contact",
   },
-  {
-    id: 3,
-    text: "Lorem",
-    url: "",
-  },
-  {
-    id: 4,
-    text: "Lorem",
-    url: "",
-  },
-  {
-    id: 5,
-    text: "lorem",
-    url: "",
-  },
+ 
 ];
 
-export const section4 = [
-  {
-    id: 1,
-    title: "Korporasi",
-    text: "Mitra Perusahaan Pemilik Product",
-  },
-  {
-    id: 2,
-    title: "Tenaga Kesehatan",
-    text: "Dokter, Apoteker, Psikolog, Psikiater, Bidan, Perawat",
-  },
-  {
-    id: 3,
-    title: "Fasilitas Kesehatan",
-    text: "Rumah Sakit, Klinik, Apotek, Laboratorium",
-  },
-];
 

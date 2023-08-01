@@ -3,6 +3,7 @@ import styled from "styled-components";
 import CardProduct from "../../components/CardProduct/CardProduct";
 import Navbar from "../../components/navbar/navbar";
 import { productsData } from "./data";
+import Footer from "../../components/Footer/Footer";
 
 export const Container = styled.div`
   display: flex;
@@ -110,7 +111,7 @@ const Product: React.FC = () => {
         </SearchContainer>
         <PageContainer>
           {searchResults.map((product) => (
-            <CardProduct
+            <CardProduct 
               key={product.id}
               name={product.name}
               price={product.price}
@@ -120,6 +121,7 @@ const Product: React.FC = () => {
           ))}
         </PageContainer>
       </Container>
+      <Footer/>
     </>
   );
 };
