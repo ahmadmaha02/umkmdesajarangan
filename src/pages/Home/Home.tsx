@@ -1,6 +1,5 @@
 import React from "react";
 import Navbar from "../../components/navbar/navbar";
-import ComingSoonPage from "../../components/Countdown/Countdown";
 import { Section, Container, BannerContainer, ButtonContainer, SliderContainer } from "./HomeStyled";
 import sample from "../../assets/image/UMKM.png"
 import content from "../../assets/image/content.jpeg"
