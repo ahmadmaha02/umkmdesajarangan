@@ -19,7 +19,7 @@ export const teamMembers = [
     { name: 'CALVIN YOHANES', role: 'Wakordes', photo: calvin},
     { name: 'NIA ERMAWATI', role: 'Sekertaris', photo: nia },
     { name: 'VERNANDA SEMBIRING', role: 'Sekertaris', photo: nanda },
-    { name: 'ZETA', role: 'acara', photo: zeta },
+    { name: 'ZETTA', role: 'acara', photo: zeta },
     { name: 'DEVI', role: 'acara', photo: devi },
     { name: 'WINDA', role: 'Bendahara', photo: winda },
     { name: 'AHMAD MAHA', role: 'PDD', photo: ahmad },
